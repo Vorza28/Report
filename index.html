@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <title>Report</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        footer {
+            margin-top: auto;
+        }
+        .card-icon {
+            font-size: 50px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="#" class="brand-logo center">Company</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#employees">Employees</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container content">
+            <h3 class="center">Report Management</h3>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#report-list">Report List</a></li>
+                        <li class="tab col s3"><a href="#add-report">Add Report</a></li>
+                    </ul>
+                </div>
+
+                <div id="report-list" class="col s12">
+                    <h4 class="center">Report List</h4>
+                    <table class="highlight responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Report Title</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-03-10</td>
+                                <td>Monthly Revenue</td>
+                                <td>Completed</td>
+                                <td><a href="#" class="btn-small blue">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>2025-03-11</td>
+                                <td>Employee Performance</td>
+                                <td>Pending</td>
+                                <td><a href="#" class="btn-small blue">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="add-report" class="col s12">
+                    <h4 class="center">Add New Report</h4>
+                    <form>
+                        <div class="input-field">
+                            <input type="text" id="report-title" required>
+                            <label for="report-title">Report Title</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="report-description" class="materialize-textarea" required></textarea>
+                            <label for="report-description">Report Description</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="date" id="report-date" required>
+                            <label for="report-date">Report Date</label>
+                        </div>
+                        <button class="btn waves-effect waves-light blue" type="submit">Submit Report</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="page-footer blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="white-text">Suta Company</h5>
+                        <p class="grey-text text-lighten-4">Managing company operations with ease.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center">
+                    ARYASUTA DANISWARA | 243307036
+                </div>
+            </div>
+        </footer>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(elems, {});
+        });
+    </script>
+    </body>
+</html>
